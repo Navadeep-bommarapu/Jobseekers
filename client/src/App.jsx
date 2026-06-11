@@ -1,11 +1,21 @@
+import Dashboard from "./pages/Dashboard"
 import Landing from "./pages/Landing"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
-    <main>
-      <Landing />
-    </main>
+    <BrowserRouter>
+       <Routes>
+        <Route path="/" element={
+          <Landing />
+        } />
+        <Route path="/dashboard" element={
+          <Dashboard />
+        } />
+       </Routes>
+    </BrowserRouter>
+
   )
 }
 
