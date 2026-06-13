@@ -1,6 +1,4 @@
 import Navbar from "../components/Navbar"
-import Hero from "../components/Hero"
-import Footer from "../components/Footer"
 import { useState } from "react"
 import { useEffect } from "react"
 import axios from "axios"
@@ -32,8 +30,6 @@ const Landing = () => {
           </div>
       })}
 
-      <Hero />
-      <Footer />
     </>
   )
 }
