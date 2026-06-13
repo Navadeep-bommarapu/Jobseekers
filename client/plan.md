@@ -19,3 +19,11 @@ Score -> Browser agent -> job opening -> returns jobs -> dashboard
 - Job tracker
 Job openings -> apply -> add to tracker
 
+## Architecture
+- Folder - DB - database connection
+           Model - Query Structure
+           Controllers - Basic functions
+           Routes - url endpoints handling
+           Middleware - 
+           Utils -
+           More (depends)
