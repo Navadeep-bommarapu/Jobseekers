@@ -1,6 +1,3 @@
-import React from 'react'
-import Login from './Login'
-
 const Navbar = () => {
   return (
     <section className='flex w-[100vw] justify-between items-center'>
