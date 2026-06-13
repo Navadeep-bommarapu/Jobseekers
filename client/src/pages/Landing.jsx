@@ -1,10 +1,36 @@
-
+import Navbar from "../components/Navbar"
+import { useState } from "react"
+import { useEffect } from "react"
+import axios from "axios"
 
 const Landing = () => {
+  const [jokes, setJokes] = useState([])
+
+  useEffect(() => {
+    axios.get('/api/jokes')
+    .then((response) => {
+      setJokes(response.data)
+      
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }, [])
+
   return (
-    <div>
-      this is a landing page
-    </div>
+    <>
+      <Navbar />
+
+      <p>Jokes: {jokes.length}</p>
+      
+      {jokes.map((joke) => {
+        return <div key={joke.id}>
+            <h3>{joke.title}</h3>
+            <p>{joke.content}</p>
+          </div>
+      })}
+
+    </>
   )
 }
 
